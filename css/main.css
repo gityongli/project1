@@ -1,5 +1,10 @@
+/*<!-- Demo styles -->*/
+html, body {
+    position: relative;
+    height: 100%;
+}
 body {
-    background: #fff;
+    background: #eee;
     font-family: Helvetica Neue, Helvetica, Arial, sans-serif;
     font-size: 14px;
     color:#000;
@@ -8,13 +13,238 @@ body {
 }
 .swiper-container {
     width: 100%;
-    padding-top: 50px;
-    padding-bottom: 50px;
+    height: 100%;
 }
 .swiper-slide {
-    background-position: center;
-    background-size: cover;
-    width: 300px;
-    height: 300px;
+    text-align: center;
+    font-size: 18px;
+    background: #fff;
+
+    /* Center slide text vertically */
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: -webkit-flex;
+    display: flex;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    -webkit-justify-content: center;
+    justify-content: center;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    -webkit-align-items: center;
+    align-items: center;
+}
+.swiper-button-next{
+    position: absolute;
+    left: 50%;
+    bottom: 5%;
+    top:auto;
+    transform: rotateZ(90deg);
+    animation:run 1s linear infinite;
+    z-index: 99;
+}
+@keyframes run {
+    from{
+        bottom:1%;
+        opacity:1;
+    }
+    to{
+        bottom: 5%;
+        opacity: 0;
+    }
+}
+/*音乐部分开始*/
+#music {
+    width: 60px;
+    height: 60px;
+    /*border:2px solid #000;*/
+    position: fixed;
+    right: 5%;
+    top: 5%;
+    /* background: black;*/
+    z-index: 9;
+}
+.musicbg {
+    width: 60px;
+    height: 60px;
+}
+.musicImg {
+    position: absolute;
+    top: 8px;
+    left: 8px;
+    width: 44px;
+    height: 44px;
+    animation: music 2s linear infinite;
+}
+@keyframes music {
+    from {
+        transform: rotate(0deg);
+    }
+    to {
+        transform: rotate(360deg);
+    }
+}
+/*音乐部分结束*/
+/*第一屏开始*/
+.swiper-slide.one{
+    background: url("../img/1.jpg");
+    background-size: 100% 100%;
+    position: relative;
+}
+.swiper-slide.one img{
+    width: 100%;
+    height: 100%;
+}
+.swiper-slide.one .top{
+    width: 70%;
+    height: 40%;
+    position: absolute;
+    top: -5%;
+    left: -10%;
+    transform: rotateZ(27deg);
+    overflow: hidden;
+}
+.swiper-slide.one img{
+    width: 100%;
+    height: 100%;
+}
+.swiper-slide.one .center{
+    width: 100%;
+    height: 20%;
+    position: absolute;
+    top:40%;
+    left:0;
+}
+.swiper-slide.one .bottom{
+    width: 70%;
+    position: absolute;
+    top: 70%;
+    left: 38%;
+    transform: rotate(24deg);
+
+    overflow: hidden;
+}
+/*第一屏结束*/
+/*第二屏开始*/
+.swiper-slide.two{
+    background: url("../img/2.gif");
+    background-size: 100% 100%;
+    position: relative;
+}
+.swiper-slide.two .top{
+    width: 100%;
+    height: 60%;
+    position: absolute;
+    top:0;
+    left:0;
+}
+.swiper-slide.two .top img{
+    width: 100%;
+    height: 100%;
 
 }
+/*第二屏结束*/
+/*第三屏开始*/
+.swiper-slide.three{
+    background: url("../img/3.png");
+    background-size:100% 100%;
+    position: relative;
+}
+.swiper-slide.three .top{
+    width: 100%;
+    height: 100%;
+    position: relative;
+}
+.swiper-slide.three .top img{
+    width: 100%;
+    height: 100%;
+}
+/*第三屏结束*/
+/*第四屏开始*/
+.swiper-slide.four{
+    background: url("../img/4.jpg");
+    background-size:100% 100%;
+    position: relative;
+}
+.swiper-slide.four .top{
+    width: 100%;
+    height: 100%;
+    position: relative;
+}
+.swiper-slide.four .top img{
+    width: 100%;
+    height: 100%;
+}
+/*第四屏结束*/
+/*第五屏开始*/
+.swiper-slide.five{
+    background: url("../img/5.jpg");
+    background-size:100% 100%;
+    position: relative;
+}
+
+/*第五屏结束*/
+/*第第六屏开始*/
+.swiper-slide.six{
+    background: url("../img/6.jpg");
+    background-size:100% 100%;
+    position: relative;
+}
+.swiper-slide.six .top{
+    width: 100%;
+    height: 100%;
+    position: relative;
+}
+.swiper-slide.six .top img{
+    width: 100%;
+    height: 100%;
+}
+/*第六屏结束*/
+/*第七屏开始*/
+.swiper-slide.serve{
+    background: url("../img/7.jpg");
+    background-size: 100% 100%;
+    position: relative;
+}
+.swiper-slide.serve img{
+    width: 100%;
+    height: 100%;
+}
+
+/*第七屏结束*/
+/*第八屏开始*/
+.swiper-slide.eight{
+    background: url("../img/8.jpg");
+    background-size: 100% 100%;
+    position: relative;
+}
+.swiper-slide.eight img{
+    width: 100%;
+    height: 100%;
+}
+
+/*第八屏结束*/
+/*第九屏开始*/
+.swiper-slide.nine{
+    background: url("../img/9.jpg");
+    background-size: 100% 100%;
+    position: relative;
+}
+.swiper-slide.nine img{
+    width: 100%;
+    height: 100%;
+}
+
+/*第九屏结束*/
+/*第十屏开始*/
+.swiper-slide.ten{
+    background: url("../img/10.gif");
+    background-size: 100% 100%;
+    position: relative;
+}
+.swiper-slide.ten img{
+    width: 100%;
+    height: 100%;
+}
+
+/*第十屏结束*/

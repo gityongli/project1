@@ -1,19 +1,45 @@
 /**
- * Created by lenovo on 17/12/15 015.
+ * Created by lenovo on 17/12/11 011.
  */
+<!-- Initialize Swiper -->
 var swiper = new Swiper('.swiper-container', {
-    effect: 'coverflow',
-    grabCursor: true,
-    centeredSlides: true,
-    slidesPerView: 'auto',
-    coverflowEffect: {
-        rotate: 50,
-        stretch: 0,
-        depth: 100,
-        modifier: 1,
-        slideShadows : true,
-    },
+    direction: 'vertical',
+    loop:true,
     pagination: {
         el: '.swiper-pagination',
+        clickable: true,
+    },
+    on:{
+        init: function(){
+            swiperAnimateCache(this); //隐藏动画元素
+            swiperAnimate(this); //初始化完成开始动画
+        },
+        slideChangeTransitionEnd: function(){
+            swiperAnimate(this); //每个slide切换结束时也运行当前slide动画
+        }
+    },
+    // 如果需要前进后退按钮
+    navigation: {
+        nextEl: '.swiper-button-next',
     },
 });
+/*音乐处理开始*/
+var music=document.getElementById("music");
+var musicbg=document.querySelectorAll(".musicbg")[0];
+var musicImg=document.querySelectorAll(".musicImg")[0];
+var audio=document.querySelector("audio");
+var flag=1;
+music.onclick=function(){
+    if(flag==1){
+        musicbg.style.display="none";
+        musicImg.style.animation="none";
+        audio.pause();
+        flag=0;
+    }else{
+        musicbg.style.display="block";
+        musicImg.style.animation="music 2s linear infinite";
+        audio.pause();
+        flag=1;
+    }
+}
+/*音乐处理结束*/
