@@ -492,6 +492,13 @@ body {
     line-height: 100%;
 
 }
+.swiper-slide.ten .center .guc{
+    width: 80%;
+    height: 40%;
+    position: absolute;
+    top: 55%;
+    left: 10%;
+}
 .swiper-slide.ten .bottom{
     width: 70%;
     height: 20%;
